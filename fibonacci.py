@@ -8,6 +8,7 @@ class Fibonacci:
     def __init__(self, value):
         int(value)
         self.value = value
+        self.start = -1
         self.end = 0
 
 
@@ -17,7 +18,7 @@ class Fibonacci:
     def __next__(self):
         if self.end > self.value:
             raise StopIteration
-
-        self.end = 1
-        return self.value
+        self.end += 1
+        self.start += 1
+        return self.start
 

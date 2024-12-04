@@ -11,3 +11,6 @@ def test_value_is_int():
 
 def test_value_0():
     assert list(Fibonacci(0)) == [0]
+
+def test_value_01():
+    assert list(Fibonacci(1)) == [0, 1]
