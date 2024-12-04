@@ -8,17 +8,20 @@ class Fibonacci:
     def __init__(self, value):
         int(value)
         self.value = value
-        self.start = -1
-        self.end = 0
+        self.stop = 0
+
+        self.start = 0
+        self.next = 1
 
 
     def __iter__(self):
         return self
 
     def __next__(self):
-        if self.end > self.value:
+        self.current_value = self.start
+        if self.stop > self.value:
             raise StopIteration
-        self.end += 1
-        self.start += 1
-        return self.start
+        self.stop += 1
+        self.start = self.next
+        return self.current_value
 
