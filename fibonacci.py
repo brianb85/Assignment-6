@@ -9,7 +9,6 @@ class Fibonacci:
         int(value)
         self.value = value
         self.stop = 0
-
         self.start = 0
         self.next = 1
 
@@ -22,6 +21,8 @@ class Fibonacci:
         if self.stop > self.value:
             raise StopIteration
         self.stop += 1
+        self.total = self.start + self.next
         self.start = self.next
+        self.next = self.total
         return self.current_value
 
