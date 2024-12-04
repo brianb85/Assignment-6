@@ -12,7 +12,6 @@ class Fibonacci:
         self.start = 0
         self.next = 1
 
-
     def __iter__(self):
         return self
 
@@ -25,4 +24,3 @@ class Fibonacci:
         self.start = self.next
         self.next = self.total
         return self.current_value
-
